@@ -1,0 +1,328 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/616/522/desktop-wallpaper-meme-posted-by-christopher-peltier-cartoon-memes.jpg');
+  background-size: cover;
+  /* Cover the entire area */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Prevent tiling */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff7e5f;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #ff7e5f;
+}
+
+.think-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ff7e5f;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.think-btn:hover {
+  background-color: #ff3e3e;
+}
+
+/* Chat container */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.chat-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+/* Chat window */
+.chat-window {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Messages */
+.message {
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease;
+}
+
+.user-message {
+  background-color: #ffecd2;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.bot-message {
+  background-color: #ffe0e0;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* Chat input */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #ff3e3e;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  color: #666;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Team Page Styling */
+.team-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #333;
+
+  background: linear-gradient(135deg, rgba(253, 252, 251, 0.9), rgba(226, 209, 195, 0.9)),
+    url('https://e1.pxfuel.com/desktop-wallpaper/616/522/desktop-wallpaper-meme-posted-by-christopher-peltier-cartoon-memes.jpg');
+
+  background-size: cover;
+  /* Make sure it covers the whole section */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Prevent tiling */
+  background-blend-mode: overlay;
+  /* Blend gradient and image nicely */
+}
+
+
+.team-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.team-intro {
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.team-intro a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.team-intro a:hover {
+  color: #868686;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #000000;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.team-member h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.team-member p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.team-member blockquote {
+  background: #fdf1ec;
+  border-left: 5px solid #ff7e5f;
+  padding: 1rem;
+  font-style: italic;
+  border-radius: 8px;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  margin-top: auto;
+}
+
+
+
+/* Why Page Styling */
+.why-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fff7f1 0%, #ffe0ac 100%);
+  border-radius: 20px;
+  margin: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+.why-section h2 {
+  font-size: 2.5rem;
+  color: #ff7a00;
+  margin-bottom: 1.5rem;
+}
+
+.why-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #ff7a00;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 0 20px 20px;
+  margin-top: 2rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
